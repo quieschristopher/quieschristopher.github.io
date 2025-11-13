@@ -1,5 +1,3 @@
-const fetch = require("node-fetch");
-
 exports.handler = async (event) => {
   try {
     const code = event.queryStringParameters.code;
@@ -40,7 +38,6 @@ exports.handler = async (event) => {
       statusCode: 200,
       body: JSON.stringify({ token: data.access_token }),
     };
-
   } catch (err) {
     return {
       statusCode: 500,
