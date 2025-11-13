@@ -4,6 +4,7 @@ backend:
   branch: main
   auth_type: implicit
   base_url: "/.netlify/functions/github-oauth"
+  redirect_uri: "https://cealtech.netlify.app/admin/callback"
 
 site_url: "https://cealtech.netlify.app"
 display_url: "https://cealtech.netlify.app"
