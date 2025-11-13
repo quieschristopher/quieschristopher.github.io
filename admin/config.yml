@@ -2,9 +2,8 @@ backend:
   name: github
   repo: quieschristopher/web-CEALTECH
   branch: main
-  auth_type: implicit
-  base_url: "/.netlify/functions/github-oauth"
-  redirect_uri: "https://cealtech.netlify.app/admin/callback"
+  auth_type: pkce
+  base_url: "https://cealtech.netlify.app/.netlify/functions"
 
 site_url: "https://cealtech.netlify.app"
 display_url: "https://cealtech.netlify.app"
