@@ -2,17 +2,5 @@ backend:
   name: github
   repo: quieschristopher/web-CEALTECH
   branch: main
-
-media_folder: "assets/img"
-public_folder: "/assets/img"
-
-collections:
-  - name: "pagina_principal"
-    label: "Página Principal"
-    files:
-      - label: "Contenido Home"
-        name: "home"
-        file: "index.html"
-        fields:
-          - { label: "Título", name: "titulo", widget: "string" }
-          - { label: "Banner", name: "banner", widget: "image" }
+  auth_type: implicit
+  base_url: "/.netlify/functions/github-oauth"
