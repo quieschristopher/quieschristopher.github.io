@@ -1,21 +1,18 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: quieschristopher/web-CEALTECH
   branch: main
 
-media_folder: "assets/img/uploads"
-public_folder: "/assets/img/uploads"
-
-site_url: ""
+media_folder: "assets/img"
+public_folder: "/assets/img"
 
 collections:
-  - name: "laptops"
-    label: "Laptops"
-    folder: "content/laptops"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Precio (S/)", name: "price", widget: "string" }
-      - { label: "Categoría", name: "category", widget: "select", options: ["Económicas","Intermedias","Touch y Convertibles","Gamer"] }
-      - { label: "Descripción", name: "description", widget: "text" }
-      - { label: "Imágenes", name: "images", widget: "list", field: { label: "Imagen", name: "image", widget: "image" } }
+  - name: "pagina_principal"
+    label: "Página Principal"
+    files:
+      - label: "Contenido Home"
+        name: "home"
+        file: "index.html"
+        fields:
+          - { label: "Título", name: "titulo", widget: "string" }
+          - { label: "Banner", name: "banner", widget: "image" }
