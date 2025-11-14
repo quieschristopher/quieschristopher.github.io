@@ -2,7 +2,7 @@ backend:
   name: github
   repo: quieschristopher/web-CEALTECH
   branch: main
-
+	
 
 media_folder: "productos/{{collection}}/{{slug}}"
 public_folder: "/productos/{{collection}}/{{slug}}"
