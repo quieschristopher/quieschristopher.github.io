@@ -1,8 +1,6 @@
 backend:
-  name: github
-  repo: quieschristopher/web-CEALTECH
+  name: git-gateway
   branch: main
-
 media_folder: "productos/{{collection}}/{{slug}}"
 public_folder: "/productos/{{collection}}/{{slug}}"
 
