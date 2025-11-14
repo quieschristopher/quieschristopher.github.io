@@ -476,3 +476,62 @@ footer {
   letter-spacing: 0.5px;
 }
 
+/* ==== OPTIMIZACIÓN EXTRA PARA MÓVILES - INDEX ==== */
+@media (max-width: 600px) {
+  body {
+    padding: 0 10px;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .banner {
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-message {
+    font-size: 1rem;
+    padding: 8px;
+    margin-top: 0;
+  }
+
+  .categorias-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .categoria {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .categoria img {
+    width: 100%;
+    height: auto;
+  }
+
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-icon {
+    width: 100%;
+    height: auto;
+  }
+
+  footer {
+    font-size: 13px;
+    padding: 12px 0;
+  }
+}

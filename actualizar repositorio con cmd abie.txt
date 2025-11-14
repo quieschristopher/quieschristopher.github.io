@@ -1,0 +1,13 @@
+actualizar repositorio con cmd abierto desde la carpeta principal de la pagina web
+
+# 1. Verifica los cambios realizados
+git status
+
+# 2. Agrega todos los archivos modificados
+git add .
+
+# 3. Crea un commit con un mensaje descriptivo
+git commit -m "Actualizar configuración para login con Google y Git Gateway"
+
+# 4. Sube los cambios a la rama principal (main o master)
+git push origin main
