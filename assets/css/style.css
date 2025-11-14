@@ -536,5 +536,20 @@ footer {
   }
 }
 
+.banner {
+  background-image: url('../img/banner.png'); /* Banner de escritorio */
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
 
+/* Versión móvil */
+@media (max-width: 600px) {
+  .banner {
+    background-image: url('../img/banner-mobile.png');
+    height: 136px;
+    background-size: cover;
+    background-position: center;
+  }
+}
 
