@@ -1,13 +1,14 @@
-actualizar repositorio con cmd abierto desde la carpeta principal de la pagina web
+Solución: sincronizar antes de empujar
+1. Primero haz un pull para traer los cambios remotos
 
-# 1. Verifica los cambios realizados
-git status
+git pull origin main --rebase
 
-# 2. Agrega todos los archivos modificados
+2. Resuelve cualquier conflicto si aparece
+Si Git te muestra conflictos, abre los archivos afectados, resuélvelos manualmente, luego:
+
 git add .
+git rebase --continue
 
-# 3. Crea un commit con un mensaje descriptivo
-git commit -m "Actualizar configuración para login con Google y Git Gateway"
+3. Ahora sí, haz el push
 
-# 4. Sube los cambios a la rama principal (main o master)
 git push origin main
