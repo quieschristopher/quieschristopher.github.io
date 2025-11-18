@@ -12,10 +12,10 @@ const laptops = {
       "Tarjeta gráfica: NVIDIA RTX 3050 8GB"
     ],
     imagenes: [
-      "../productos/gamer/gamer1/gamer1.webp",
-      "../productos/gamer/gamer1/gamer1-1.webp",
-      "../productos/gamer/gamer1/gamer1-2.webp",
-      "../productos/gamer/gamer1/gamer1-3.webp"
+      "../productos/gamer/gamer1/gamer1.jpg",
+      "../productos/gamer/gamer1/gamer1-1.jpg",
+      "../productos/gamer/gamer1/gamer1-2.jpg",
+      "../productos/gamer/gamer1/gamer1-3.jpg"
     ]
   },
   gamer2: {
