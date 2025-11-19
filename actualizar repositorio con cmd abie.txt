@@ -1,28 +1,6 @@
-1 Actualizar tu repositorio local desde GitHub usando CMD
-- Abre la terminal (CMD o Git Bash)
-Asegúrate de estar en la carpeta del repositorio local:
-
-cd ruta/a/tu/repositorio
-
-2 Verifica el estado actual (opcional)
-Esto te muestra si tienes cambios sin guardar:
-
-git status
-
-3 Guarda tus cambios locales (si los hay)
-Si has modificado archivos y quieres conservarlos antes de actualizar
-
+cd ruta/de/tu/proyecto
 git add .
-git commit -m "Guardando cambios locales antes de actualizar"
-
-4 Actualiza desde GitHub (repositorio remoto)
-Para traer los últimos cambios del repositorio remoto (por defecto llamado origin y rama main o master):
-
-git pull origin main
-
-5 Si hay conflictos entre tus cambios locales y los remotos, Git te lo indicará. En ese caso
-
-git add archivo-resuelto
-git commit -m "Conflictos resueltos"
+git commit -m "Descripción del cambio"
+git push
 
 

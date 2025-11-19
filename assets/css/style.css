@@ -17,13 +17,14 @@ body {
 
 @media (max-width: 768px) {
   body {
-    padding: 0 10px; /* 🔹 Menor espacio en móviles */
+    padding: 0 100px; /* 🔹 Menor espacio en móviles */
   }
 }
 
 .banner {
   width: 100%;
   height: 200px;
+
   background-size: cover;
   background-position: center;
   display: block;
@@ -297,7 +298,7 @@ footer {
   margin: 50px auto;
   background: #fff;
   border-radius: 12px;
-  padding: 30px;
+  padding: 20px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
@@ -564,5 +565,102 @@ footer {
     background-size: cover;
     background-position: center;
   }
+}
+
+/* 🔥 Cambios SOLO en celulares */
+@media (max-width: 768px) {
+
+  /* Ocultar miniaturas en celular */
+  .miniaturas {
+    display: none !important;
+  }
+
+  /* Imagen principal estilo "slider" */
+  .imagen-principal {
+    width: 100%;
+    height: 350px;
+    max-width: 100%;
+  }
+
+  .imagen-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Puntitos (indicadores) */
+  .puntos {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .punto {
+    width: 10px;
+    height: 10px;
+    background: #bbb;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+
+  .punto.activo {
+    background: #ff4500; /* color CEALTECH */
+    transform: scale(1.3);
+  }
+/* 🔥 Evitar desbordamiento horizontal en móviles */
+html, body {
+  overflow-x: hidden;
+}
+
+}
+
+/* 🔥 Corrección para centrar la imagen principal en celulares */
+@media (max-width: 768px) {
+
+  /* Centrar la galería */
+  .galeria {
+    align-items: center !important;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  /* Centrar el contenedor de la imagen */
+  .imagen-principal {
+    margin: 0 auto !important;
+  }
+
+  /* Asegurar que la imagen esté centrada */
+  .imagen-principal img {
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Quitar margen que rompe el diseño */
+  .info-laptop {
+    margin-left: 0 !important;
+  }
+}
+
+/* 🔥 Navbar con botones iguales en móviles */
+@media (max-width: 768px) {
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  nav .btn {
+    width: 100%;
+    text-align: center;
+    padding: 3px 0 !important;  /* altura uniforme */
+    border-radius: 10px;
+  }
+.detalle-container {
+  margin: 10px auto; /* antes 50px */
+}
 }
 
