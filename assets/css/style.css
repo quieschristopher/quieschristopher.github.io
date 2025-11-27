@@ -362,17 +362,21 @@ footer {
   margin-bottom: 10px;
 }
 
-.marca {
+.condicion {
   font-size: 0.95rem;
   color: #666;
 }
 
+.codigo {
+  font-size: 0.95rem;
+  color: #666;
+}
 .precio {
   margin: 20px 0;
 }
 
 .precio-anterior {
-  text-decoration: line-through;
+ 
   color: #999;
   font-size: 1rem;
 }

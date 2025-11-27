@@ -3,35 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Laptops Gamer</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Laptops Gamer | CEALTECH</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Laptops Gamer</h1>
-    <a href="index.html" class="btn-volver">← Volver al catálogo</a>
-  </header>
+  <!-- BANNER -->
+  <div class="banner"></div>
 
-  <div class="productos">
-    <a href="detalle-laptop1.html" class="producto">
-      <img src="img/gamer1.jpg" alt="Laptop Gamer 1">
-      <h3>Lenovo Legion 5</h3>
-      <p>$1,200</p>
-    </a>
 
-    <a href="detalle-laptop2.html" class="producto">
-      <img src="img/gamer2.jpg" alt="Laptop Gamer 2">
-      <h3>Asus TUF Gaming F15</h3>
-      <p>$1,100</p>
-    </a>
+  <!-- ====== NAVEGACIÓN ====== -->
+  <nav>
+    <a href="../index.html" class="btn">Inicio</a>
+    <a href="oficina.html" class="btn">Laptops de Oficina</a>
+    <a href="convertible.html" class="btn">Laptops Convertibles</a>
+    <a href="gamer.html" class="btn">Laptops Gamer</a>
+  </nav>
 
-    <a href="detalle-laptop3.html" class="producto">
-      <img src="img/gamer3.jpg" alt="Laptop Gamer 3">
-      <h3>Acer Nitro 5</h3>
-      <p>$1,050</p>
-    </a>
+  <!-- ====== CONTENIDO ====== -->
+  <div class="container">
+    <h2>Laptops Convertibles y Tactiles</h2>
+    <p>Encuentra la laptop gamer ideal para ti. Rendimiento, diseño y potencia en un solo lugar.</p>
+
+    <div class="laptops-container" id="laptops-gamer">
+      <!-- Aquí se cargan las laptops con JS -->
+    </div>
   </div>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <p>© 2025 CEALTECH - Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- ====== BOTÓN WHATSAPP ====== -->
+  <a href="https://wa.me/51999999999" class="whatsapp-float" target="_blank">
+  <img src="../assets/img/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+</a>
+
+  <!-- ====== SCRIPT ====== -->
+  <script>
+    // Datos de las laptops gamer
+    const laptopsGamer = [
+      {
+        id: "convertible1",
+        nombre: "Laptop Convertible 1",
+        imagen: "convertible/convertible1/convertible1.jpg",
+        specs: "Intel Core i9 | 16GB RAM | SSD 512GB | RTX 3050",
+      },
+      {
+        id: "convertible2",
+        nombre: "Laptop Gamer 2",
+        imagen: "gamer/gamer2/gamer2.jpeg",
+        specs: "Ryzen 7 | 16GB RAM | SSD 1TB | RTX 4060",
+      },
+      {
+        id: "convertible3",
+        nombre: "Laptop Gamer 3",
+        imagen: "gamer/gamer3/gamer3.jpeg",
+        specs: "Intel Core i7 | 32GB RAM | SSD 1TB | RTX 4070",
+      },
+      {
+        id: "convertible4",
+        nombre: "Laptop Gamer 4",
+        imagen: "gamer/gamer4/gamer4.jpeg",
+        specs: "Ryzen 9 | 32GB RAM | SSD 2TB | RTX 4080",
+      }
+    ];
+
+    // Contenedor
+    const container = document.getElementById("laptops-gamer");
+
+    // Generar tarjetas dinámicamente
+    laptopsGamer.forEach(laptop => {
+      const card = document.createElement("div");
+      card.className = "laptop-card";
+      card.innerHTML = `
+        <img src="${laptop.imagen}" alt="${laptop.nombre}">
+        <h4>${laptop.nombre}</h4>
+        <p>${laptop.specs}</p>
+        <a href="laptop.html?laptop=${laptop.id}" class="btn">Ver detalles</a>
+      `;
+      container.appendChild(card);
+    });
+  </script>
 
 </body>
 </html>

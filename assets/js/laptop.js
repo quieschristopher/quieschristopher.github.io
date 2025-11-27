@@ -2,7 +2,7 @@ const laptops = {
   gamer1: {
     nombre: "Laptop Gamer 1 - Lenovo LOQ",
     marca: "Lenovo",
-    precioAnterior: "S/ 4,199.00",
+    condicion: "Usado",
     precioActual: "S/ 3,799.00",
     specs: [
       "Procesador: Intel Core i5-12450H (10 núcleos)",
@@ -60,9 +60,9 @@ const laptops = {
   },
 
   convertible1: {
-    nombre: "Laptop Gamer 1 - Lenovo LOQ",
-    marca: "Lenovo",
-    precioAnterior: "S/ 4,199.00",
+    nombre: "Lenovo Ideapad Flex 5 14ALC7",
+   codigo: "codigo interno : 0000",
+    condicion: "Condicion : Usado",
     precioActual: "S/ 3,799.00",
     specs: [
       "Procesador: Intel Core i5-12450H (10 núcleos)",
@@ -81,7 +81,91 @@ const laptops = {
     ]
   },
 
-  convertible2: {
+convertible2: {
+nombre: "Lenovo Ideapad 5 15IAL7 Intel Core i7-1255U Ram 16GB Disco 512GB 15.6 TOUCH	 FHD",
+codigo: "SKU : 2028",
+condicion: "Condicion : Seminuevo",
+precioactual: "S/2199",
+specs: [
+"Modelo : Lenovo Ideapad 5 15IAL7",
+"Material : Plastico premium y aluminio",
+
+"Procesador : Intel Core i7-1255U",
+"Ram : Ddr4 16 GB 3200 mhz",
+"Almacenamiento : Disco Solido M.2 512 Gb",
+"Pantalla : 15.6 FHD",
+"Teclado : Numerico Us con retroiluminacion",
+"Panel : Ips  Touch",
+"Graficos : Nvidia® GeForce® MX550  2",
+"Puertos : 1 HDMI 1.4b; Lector de tarjetas SD; Conector combinado para auriculares y micrófono de 3,5 mm; 2 USB-A 3.2 Gen 1 (tipo C, PD 3.0 y DP 1.2); 2 USB-A 3.2 Gen 1",
+"Conectividad : Bluetooth® 5.1, Wifi 6",
+"Color : Plateado",
+"Web cam : HD con micrófono dual y obturador de privacidad",
+"Seguridad : Lector de huellas",
+
+
+],
+imagenes: [
+"../productos/convertible/convertible2/convertible2-1.webp",
+"../productos/convertible/convertible2/convertible2-2.webp",
+"../productos/convertible/convertible2/convertible2-3.webp",
+"../productos/convertible/convertible2/convertible2-4.webp",
+"../productos/convertible/convertible2/convertible2-5.webp"
+]
+},
+
+  convertible3: {
+nombre: "Lenovo IDEAPAD FLEX 5 14ARE05 AMD Ryzen 3-4300U Ram 4 GB Disco 256 14 FHD Touch y compatible con Lapiz",
+codigo: "SKU : 2049",
+condicion: "Condicion : Seminuevo",
+precioactual: "S/1399",
+specs: [
+"Procesador : AMD Ryzen 3-4300U",
+"Material : Plastico premium",
+"Ram : DDR4 4 GB 3200 mhz",
+"Almacenamiento : Disco Solido M.2 256",
+"Pantalla : 14 FHD ",
+"Teclado : Us    con retroiluminacion",
+"Panel : IPS 360° Touch y compatible con Lapiz",
+"Graficos : AMD Radeon 2",
+"Puertos : usb 2.0",
+"Conectividad : Bluetooth® 5.1, Wifi 6",
+"Web cam : HD con micrófono dual y obturador de privacidad",
+"Color : Azul",
+"Seguridad : Lector de huellas",
+],
+imagenes: [
+"../productos/convertible/convertible3/convertible3-1.webp",
+"../productos/convertible/convertible3/convertible3-2.webp",
+"../productos/convertible/convertible3/convertible3-3.webp",
+"../productos/convertible/convertible3/convertible3-4.webp",
+"../productos/convertible/convertible3/convertible3-5.webp",
+]
+},
+
+oficina1: {
+    nombre: "Laptop Gamer 1 - Lenovo LOQ",
+    marca: "Lenovo",
+    precioAnterior: "Condicion : Usado",
+    precioActual: "S/ 3,799.00",
+    specs: [
+      "Procesador: Intel Core i5-12450H (10 núcleos)",
+      "Memoria RAM: 24GB DDR5",
+      "Almacenamiento: 512GB SSD",
+      "Pantalla: 15.6\" FHD 144Hz",
+      "Tarjeta gráfica: NVIDIA RTX 3050 8GB"
+    ],
+    imagenes: [
+      "../productos/convertible/convertible1/convertible1.jpg",
+      "../productos/convertible/convertible1/convertible1-1.jpg",
+      "../productos/convertible/convertible1/convertible1-2.jpg",
+      "../productos/convertible/convertible1/convertible1-3.jpg",
+      "../productos/convertible/convertible1/convertible1-4.jpg",
+      "../productos/convertible/convertible1/convertible1-5.jpg"
+    ]
+  },
+
+  oficina2: {
     nombre: "Laptop Gamer 2 - HP Victus",
     marca: "HP",
     precioAnterior: "S/ 5,199.00",
@@ -101,7 +185,7 @@ const laptops = {
     ]
   },
 
-  convertible3: {
+  oficina3: {
     nombre: "Laptop Gamer 3 - ASUS TUF",
     marca: "ASUS",
     precioAnterior: "S/ 6,499.00",
@@ -122,7 +206,6 @@ const laptops = {
   }
 };
 
-
 // ===============================
 // 🔎 OBTENER ID DE LA URL
 // ===============================
@@ -139,8 +222,9 @@ if (laptopId && laptops[laptopId]) {
 
   // Rellenar datos
   document.getElementById("laptopTitle").textContent = laptop.nombre;
-  document.getElementById("laptopMarca").textContent = `Marca: ${laptop.marca}`;
-  document.getElementById("precioAnterior").textContent = laptop.precioAnterior;
+    document.getElementById("codigointerno").textContent = laptop.codigo;
+  document.getElementById("laptopcondicion").textContent = laptop.condicion;
+
   document.getElementById("precioActual").textContent = laptop.precioActual;
 
 
@@ -148,13 +232,24 @@ if (laptopId && laptops[laptopId]) {
   // 📌 ESPECIFICACIONES
   // ============================
   const specsList = document.getElementById("laptopSpecs");
-  specsList.innerHTML = "";
+specsList.innerHTML = "";
 
-  laptop.specs.forEach(spec => {
-    const li = document.createElement("li");
+laptop.specs.forEach(spec => {
+  const li = document.createElement("li");
+
+  // separar en "Etiqueta : Valor"
+  const partes = spec.split(":");
+
+  // si tiene etiqueta y valor
+  if (partes.length > 1) {
+    li.innerHTML = `<strong>${partes[0].trim()}:</strong> ${partes[1].trim()}`;
+  } else {
+    // por si alguna línea no tiene ":"
     li.textContent = spec;
-    specsList.appendChild(li);
-  });
+  }
+
+  specsList.appendChild(li);
+});
 
 
 
